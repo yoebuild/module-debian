@@ -1,0 +1,18 @@
+# Debian bookworm signing-key fingerprints — yoe update-feeds will
+# accept these on key rollover (R25). When Debian rotates a key, the
+# operator verifies the new fingerprint out-of-band against
+# https://ftp-master.debian.org/keys.html and appends it here via
+# `yoe update-feeds --allow-key-update=<fpr>` or by editing this file
+# directly.
+#
+# Format: one fingerprint per line, no whitespace, no spaces in the
+# fingerprint itself. Lines starting with # are comments.
+
+# Debian Stable Release Key (12 / bookworm)
+4D64FEC119C2029067D6E791F8D2585B8783D481
+
+# Debian Archive Automatic Signing Key (12 / bookworm)
+B8B80B5B623EAB6AD8775C45B7C5D7D6350947F8
+
+# Debian Security Archive Automatic Signing Key (12 / bookworm)
+05AB90340C0C5E797F44A8C8254CF3B5AEC0A8F0

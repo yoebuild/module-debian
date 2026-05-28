@@ -4,8 +4,11 @@ module_info(
 )
 
 # Each debian_feed() registers a synthetic module named
-# "<parent>.<suite>.<component>", so consumers reference packages via
-# "debian.bookworm.main" / "debian.bookworm.contrib" in prefer_modules.
+# "<parent>.<component>", so consumers reference packages via
+# "debian.main" / "debian.contrib" in prefer_modules. The suite kwarg
+# is feed configuration (it picks which on-disk Packages file is
+# parsed); only one Debian suite per project is supported, so it
+# doesn't appear in the module identity.
 # Units materialize lazily as the runtime closure references them —
 # declaring a feed costs one Starlark call and ~12 MB of checked-in
 # Packages text per arch, not 60k+ .star files.

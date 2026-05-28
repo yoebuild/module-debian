@@ -81,11 +81,16 @@ RUN apt-get update && \
 # matching CLAUDE.md's "no installing packages in the container" rule and
 # letting each project pin its own runtime version.
 
-# x86-only packages (bootloader, firmware) — skip on other arches
+# x86-only packages (bootloader, firmware) — skip on other arches.
+# extlinux is the bootloader installer that writes ldlinux.sys into the
+# root partition; image.star's _install_syslinux_debian calls it after
+# writing mbr.bin from /usr/lib/SYSLINUX/.
 RUN if [ "$(uname -m)" = "x86_64" ]; then \
         apt-get update && \
         apt-get install --no-install-recommends -y \
             syslinux \
+            syslinux-common \
+            extlinux \
             ovmf && \
         rm -rf /var/lib/apt/lists/*; \
     fi

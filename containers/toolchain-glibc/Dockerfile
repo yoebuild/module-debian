@@ -19,7 +19,7 @@
 # module's MODULE.star in the same commit, then rebuild the container so
 # its baked debian-archive-keyring matches.
 
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 
 # Avoid interactive prompts during apt operations.
 ENV DEBIAN_FRONTEND=noninteractive

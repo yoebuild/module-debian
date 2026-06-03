@@ -22,7 +22,7 @@ module_info(
 # (planned) for the full maintainer playbook.
 
 _DEBIAN_MIRROR = "https://deb.debian.org/debian"
-_DEBIAN_SUITE = "bookworm"
+_DEBIAN_SUITE = "trixie"
 
 debian_feed(
     name = "main",

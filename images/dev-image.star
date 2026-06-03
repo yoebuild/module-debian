@@ -42,6 +42,7 @@ image(
         "strace",
         "procps",
         "iproute2",
+        "iputils-ping",
         "vim-tiny",
     ],
 )

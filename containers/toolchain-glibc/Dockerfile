@@ -27,10 +27,11 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Common bootstrap toolchain + Debian-specific tooling + yoe-side helpers
 # (bubblewrap, dosfstools, mtools, e2fsprogs, util-linux ships with base).
 #
-# eatmydata is included so yoe's image-assembly path (dpkg --configure -a
-# under binfmt, per R18 in docs/specs/2026-05-25-module-debian.md) can
-# no-op fsync/fdatasync during configure — isar-proven ~10x speedup, and
-# the image is archived wholesale so build-time fsync is wasted work.
+# mmdebstrap drives image assembly: it resolves the package list against
+# the project's local Debian repo and runs apt+dpkg in a single pass to
+# unpack and configure the rootfs. eatmydata no-ops fsync/fdatasync during
+# that configure pass — isar-proven ~10x speedup, and the image is archived
+# wholesale so build-time fsync is wasted work.
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
         ca-certificates \
@@ -62,6 +63,7 @@ RUN apt-get update && \
         dpkg-dev \
         apt-utils \
         debootstrap \
+        mmdebstrap \
         gpg \
         gnupg \
         fakeroot \

@@ -10,7 +10,7 @@ into `$DESTDIR`.
 
 The module currently tracks Debian **Trixie**. The suite pinned in
 `MODULE.star` (`_DEBIAN_SUITE`) MUST match the `FROM debian:<release>`
-line in `containers/toolchain-glibc/Dockerfile` — packages from these
+line in `containers/toolchain-debian-13/Dockerfile` — packages from these
 feeds are ABI- and signing-key-coupled to the toolchain libc.
 
 ## Layout
@@ -26,8 +26,8 @@ keys/
   debian-archive-keyring.gpg   # bootstrap keyring for InRelease verification
   allowed-fingerprints         # fingerprint allow-list for new keys
 containers/
-  toolchain-glibc.star     # Debian/glibc build toolchain (provides "toolchain")
-  toolchain-glibc/Dockerfile
+  toolchain-debian-13.star # Debian/glibc build toolchain (provides "toolchain")
+  toolchain-debian-13/Dockerfile
 images/
   base-image.star          # minimal bootable + SSH image
   ssh-image.star           # boot + SSH, no extra tooling
@@ -51,12 +51,18 @@ any new key, and atomically rewrites `feeds/<component>/<arch>/Packages`.
 
 ## Toolchain
 
-`containers/toolchain-glibc` is the Debian/glibc build toolchain. It
+`containers/toolchain-debian-13` is the Debian/glibc build toolchain. It
 declares `provides = ["toolchain"]` and `distro = "debian"`, wiring it
 into yoe's distro-aware toolchain dispatch: Debian images resolve the
-virtual `toolchain` reference to this container, Alpine images resolve it
+virtual `toolchain` reference to this container, Ubuntu images resolve it
+to `module-ubuntu`'s `toolchain-ubuntu-26.04`, and Alpine images resolve it
 to `module-alpine`'s `toolchain-musl`. It lives here because it is
 ABI-coupled to the Debian release pinned in `MODULE.star`.
+
+The Debian and Ubuntu glibc toolchains are **not** interchangeable — apt is
+not forward-compatible across suites, so each carries its distro and release
+in its unit name. The image tag is `yoe/<unit-name>:<version>-<arch>`, so two
+toolchains sharing a name would share a tag and overwrite each other's image.
 
 ## Images
 

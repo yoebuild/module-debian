@@ -1,6 +1,6 @@
 module_info(
     name = "debian",
-    description = "Wraps Debian's main + security + updates package feeds as yoe units, and ships the Debian/glibc-side build toolchain (toolchain-glibc). The Debian release pinned below MUST match the FROM debian:<release> in containers/toolchain-glibc/Dockerfile — packages from these feeds are ABI- and signing-key-coupled to the toolchain libc.",
+    description = "Wraps Debian's main + security + updates package feeds as yoe units, and ships the Debian/glibc-side build toolchain (toolchain-debian-13). The Debian release pinned below MUST match the FROM debian:<release> in containers/toolchain-debian-13/Dockerfile — packages from these feeds are ABI- and signing-key-coupled to the toolchain libc.",
 )
 
 # Each apt_feed() registers a synthetic module named

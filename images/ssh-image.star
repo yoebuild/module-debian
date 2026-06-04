@@ -1,4 +1,5 @@
 load("@core//classes/image.star", "image")
+load("//classes/kernel.star", "debian_kernel")
 
 # Minimal Debian image that boots and accepts an SSH login, carrying no
 # extra developer tooling — the apt-side counterpart to module-alpine's
@@ -15,7 +16,7 @@ image(
     name = "ssh-image",
     distro = "debian",
     artifacts = [
-        "linux-image-amd64",
+        debian_kernel(),
         "systemd-sysv",
         "systemd-resolved",
         "init",

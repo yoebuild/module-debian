@@ -1,4 +1,5 @@
 load("@core//classes/image.star", "image")
+load("//classes/kernel.star", "debian_kernel")
 
 # Debian dev-image: the base-image closure plus a diagnostic and
 # editor userland so the device is usable for actual work over SSH.
@@ -9,7 +10,7 @@ image(
     distro = "debian",
     artifacts = [
         # base-image closure
-        "linux-image-amd64",
+        debian_kernel(),
         "systemd-sysv",
         "systemd-resolved",
         "init",

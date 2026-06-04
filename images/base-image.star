@@ -1,4 +1,5 @@
 load("@core//classes/image.star", "image")
+load("//classes/kernel.star", "debian_kernel")
 
 # Minimal bootable Debian image. The artifact set is the smallest
 # closure that boots in QEMU and accepts an SSH login: kernel, init
@@ -19,7 +20,7 @@ image(
     name = "base-image",
     distro = "debian",
     artifacts = [
-        "linux-image-amd64",
+        debian_kernel(),
         "systemd-sysv",
         "systemd-resolved",
         "init",

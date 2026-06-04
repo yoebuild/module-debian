@@ -1,6 +1,80 @@
 # module-debian
 
-Debian Bookworm module for Yoe Build.
+Wraps prebuilt Debian packages as yoe units, and ships the Debian/glibc
+build toolchain. This is the glibc-side counterpart to `module-alpine`:
+where `module-core` builds packages from source, units here fetch a
+binary `.deb` from a pinned Debian release, verify its SHA256 against the
+upstream-signed `Packages` catalog, and republish it through yoe's
+project repo. A unit's "build" is just extracting the deb's `data.tar`
+into `$DESTDIR`.
 
-Note, Bookworm version is no longer maintained in Yoe, we have moved on to
-Trixie.
+The module currently tracks Debian **Trixie**. The suite pinned in
+`MODULE.star` (`_DEBIAN_SUITE`) MUST match the `FROM debian:<release>`
+line in `containers/toolchain-glibc/Dockerfile` — packages from these
+feeds are ABI- and signing-key-coupled to the toolchain libc.
+
+## Layout
+
+```
+MODULE.star                # debian_feed() declarations (one per component)
+feeds/
+  main/
+    InRelease              # signed release index
+    amd64/Packages         # checked-in catalog snapshot
+    arm64/Packages
+keys/
+  debian-archive-keyring.gpg   # bootstrap keyring for InRelease verification
+  allowed-fingerprints         # fingerprint allow-list for new keys
+containers/
+  toolchain-glibc.star     # Debian/glibc build toolchain (provides "toolchain")
+  toolchain-glibc/Dockerfile
+images/
+  base-image.star          # minimal bootable + SSH image
+  ssh-image.star           # boot + SSH, no extra tooling
+  dev-image.star           # base + diagnostic/editor userland
+```
+
+## Feeds
+
+Each `debian_feed()` in `MODULE.star` registers a synthetic module named
+`debian.<component>` (e.g. `debian.main`), so consumers reference
+packages via `debian.main` in `prefer_modules`. Declaring a feed costs
+one Starlark call and the checked-in `Packages` text — units materialize
+lazily as the runtime closure references them, so working memory tracks
+closure size, not the 60k+ packages in the catalog.
+
+To refresh the in-tree `Packages` files after Debian ships a point
+release or security update, run `yoe update-feeds` in this module's root.
+That fetches each feed's `InRelease`, verifies the signature against
+`keys/debian-archive-keyring.gpg`, applies the fingerprint allow-list to
+any new key, and atomically rewrites `feeds/<component>/<arch>/Packages`.
+
+## Toolchain
+
+`containers/toolchain-glibc` is the Debian/glibc build toolchain. It
+declares `provides = ["toolchain"]` and `distro = "debian"`, wiring it
+into yoe's distro-aware toolchain dispatch: Debian images resolve the
+virtual `toolchain` reference to this container, Alpine images resolve it
+to `module-alpine`'s `toolchain-musl`. It lives here because it is
+ABI-coupled to the Debian release pinned in `MODULE.star`.
+
+## Images
+
+- `base-image` — the smallest closure that boots in QEMU and accepts an
+  SSH login: kernel, systemd init, libc, coreutils, bash, dpkg/apt,
+  openssh-server, and NetworkManager for DHCP.
+- `ssh-image` — the same boot + SSH closure with no extra tooling, for an
+  apples-to-apples size comparison against `module-alpine`'s `ssh-image`.
+- `dev-image` — the base closure plus a diagnostic and editor userland
+  (curl, htop, strace, less, file, procps, iproute2, ping, vim-tiny) so
+  the device is usable for work over SSH.
+
+The rootfs is assembled with `mmdebstrap --variant=custom`, which
+installs exactly the listed closure and its hard dependencies — no
+implicit Essential/Priority base. That keeps images minimal but means the
+packages dpkg needs at configure time are listed explicitly in each
+image (`dash`, `diffutils`, `libc-bin`, `base-files`, `base-passwd`).
+
+See [`docs/module-debian.md`](https://github.com/yoebuild/yoe/blob/main/docs/module-debian.md)
+in the main yoe repo for the "when to reach for it" rubric and the full
+maintainer playbook.

@@ -8,7 +8,7 @@
 # DEBIAN VERSION COUPLING — read before bumping the FROM line below.
 #
 # This container's Debian release MUST match _DEBIAN_SUITE in this
-# module's MODULE.star. Target packages from the debian_feed (libc6,
+# module's MODULE.star. Target packages from the apt_feed (libc6,
 # openssl, sqlite3, …) are ABI- and signing-key-coupled to the Debian
 # release they were built against. Bumping one without the other yields
 # a toolchain whose libc/headers don't match the target image's libc —

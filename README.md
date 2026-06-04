@@ -16,7 +16,7 @@ feeds are ABI- and signing-key-coupled to the toolchain libc.
 ## Layout
 
 ```
-MODULE.star                # debian_feed() declarations (one per component)
+MODULE.star                # apt_feed() declarations (one per component)
 feeds/
   main/
     InRelease              # signed release index
@@ -36,7 +36,7 @@ images/
 
 ## Feeds
 
-Each `debian_feed()` in `MODULE.star` registers a synthetic module named
+Each `apt_feed()` in `MODULE.star` registers a synthetic module named
 `debian.<component>` (e.g. `debian.main`), so consumers reference
 packages via `debian.main` in `prefer_modules`. Declaring a feed costs
 one Starlark call and the checked-in `Packages` text — units materialize

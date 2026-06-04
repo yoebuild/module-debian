@@ -3,7 +3,7 @@ module_info(
     description = "Wraps Debian's main + security + updates package feeds as yoe units, and ships the Debian/glibc-side build toolchain (toolchain-glibc). The Debian release pinned below MUST match the FROM debian:<release> in containers/toolchain-glibc/Dockerfile — packages from these feeds are ABI- and signing-key-coupled to the toolchain libc.",
 )
 
-# Each debian_feed() registers a synthetic module named
+# Each apt_feed() registers a synthetic module named
 # "<parent>.<component>", so consumers reference packages via
 # "debian.main" / "debian.contrib" in prefer_modules. The suite kwarg
 # is feed configuration (it picks which on-disk Packages file is
@@ -24,8 +24,9 @@ module_info(
 _DEBIAN_MIRROR = "https://deb.debian.org/debian"
 _DEBIAN_SUITE = "trixie"
 
-debian_feed(
+apt_feed(
     name = "main",
+    distro = "debian",
     url = _DEBIAN_MIRROR,
     suite = _DEBIAN_SUITE,
     component = "main",

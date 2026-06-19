@@ -18,9 +18,18 @@ feeds are ABI- and signing-key-coupled to the toolchain libc.
 ```
 MODULE.star                # apt_feed() declarations (one per component)
 feeds/
-  main/
+  main/                    # DFSG-free core
     InRelease              # signed release index
     amd64/Packages         # checked-in catalog snapshot
+    arm64/Packages
+  contrib/                 # free packages that depend on non-free
+    amd64/Packages
+    arm64/Packages
+  non-free-firmware/       # firmware blobs (Wi-Fi, GPU, etc.)
+    amd64/Packages
+    arm64/Packages
+  non-free/                # everything else not DFSG-free
+    amd64/Packages
     arm64/Packages
 keys/
   debian-archive-keyring.gpg   # bootstrap keyring for InRelease verification
@@ -37,17 +46,34 @@ images/
 ## Feeds
 
 Each `apt_feed()` in `MODULE.star` registers a synthetic module named
-`debian.<component>` (e.g. `debian.main`), so consumers reference
-packages via `debian.main` in `prefer_modules`. Declaring a feed costs
-one Starlark call and the checked-in `Packages` text — units materialize
-lazily as the runtime closure references them, so working memory tracks
-closure size, not the 60k+ packages in the catalog.
+`debian.<component>`, so consumers reference packages via `debian.main`,
+`debian.contrib`, `debian.non-free-firmware`, or `debian.non-free` in
+`prefer_modules`. Declaring a feed costs one Starlark call and the
+checked-in `Packages` text — units materialize lazily as the runtime
+closure references them, so working memory tracks closure size, not the
+60k+ packages in the catalog.
+
+The four components mirror Debian's archive sections: `main` (DFSG-free
+core), `contrib` (free packages that depend on something non-free),
+`non-free-firmware` (firmware blobs split out since Debian 12, the
+component embedded boards most often need), and `non-free` (everything
+else not DFSG-free). All four track the same suite.
+
+**Suites vs. components.** Every feed here is a *component* of the one
+pinned suite (`trixie`). Debian's `*-security`, `*-updates`, and
+`*-backports` are separate *suites*, not components, and yoe currently
+supports only one suite per distro: the build toolchain pins a single
+release and glibc from a different suite cannot safely mix into the
+rootfs. Adding the security pocket is therefore a model change (suite
+becomes part of feed identity), not another `apt_feed()` call — between
+point releases, refresh the pinned suite with `yoe update-feeds` to pull
+in fixes that have migrated into it.
 
 To refresh the in-tree `Packages` files after Debian ships a point
 release or security update, run `yoe update-feeds` in this module's root.
 That fetches each feed's `InRelease`, verifies the signature against
 `keys/debian-archive-keyring.gpg`, applies the fingerprint allow-list to
-any new key, and atomically rewrites `feeds/<component>/<arch>/Packages`.
+any new key, and atomically rewrites every `feeds/<component>/<arch>/Packages`.
 
 ## Toolchain
 

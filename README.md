@@ -9,7 +9,7 @@ project repo. A unit's "build" is just extracting the deb's `data.tar`
 into `$DESTDIR`.
 
 The module currently tracks Debian **Trixie**. The suite pinned in
-`MODULE.star` (`_DEBIAN_SUITE`) MUST match the `FROM debian:<release>`
+`MODULE.star` (`_DEBIAN_CODENAME`) MUST match the `FROM debian:<release>`
 line in `containers/toolchain-debian-13/Dockerfile` — packages from these
 feeds are ABI- and signing-key-coupled to the toolchain libc.
 

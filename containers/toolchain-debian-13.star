@@ -2,7 +2,7 @@ load("@core//classes/container.star", "container")
 
 # toolchain-debian-13 is the Debian/glibc-side build toolchain. It lives in
 # module-debian because it is Debian-side build infrastructure ABI-coupled
-# to the Debian release pinned in this module's MODULE.star (_DEBIAN_SUITE)
+# to the Debian release pinned in this module's MODULE.star (_DEBIAN_CODENAME)
 # and the FROM line in this container's Dockerfile.
 #
 # provides = ["toolchain"] + distro = "debian" wire this into yoe's

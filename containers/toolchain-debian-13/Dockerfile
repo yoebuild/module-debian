@@ -7,7 +7,7 @@
 #
 # DEBIAN VERSION COUPLING — read before bumping the FROM line below.
 #
-# This container's Debian release MUST match _DEBIAN_SUITE in this
+# This container's Debian release MUST match _DEBIAN_CODENAME in this
 # module's MODULE.star. Target packages from the apt_feed (libc6,
 # openssl, sqlite3, …) are ABI- and signing-key-coupled to the Debian
 # release they were built against. Bumping one without the other yields
@@ -15,7 +15,7 @@
 # a subtle ABI mismatch that compiles fine, links fine, then segfaults
 # on first run.
 #
-# When bumping: update the FROM tag here AND _DEBIAN_SUITE in this
+# When bumping: update the FROM tag here AND _DEBIAN_CODENAME in this
 # module's MODULE.star in the same commit, then rebuild the container so
 # its baked debian-archive-keyring matches.
 

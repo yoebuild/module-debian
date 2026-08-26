@@ -8,10 +8,35 @@ upstream-signed `Packages` catalog, and republish it through yoe's
 project repo. A unit's "build" is just extracting the deb's `data.tar`
 into `$DESTDIR`.
 
-The module currently tracks Debian **Trixie**. The suite pinned in
+This branch tracks Debian 13 (`trixie`). The suite pinned in
 `MODULE.star` (`_DEBIAN_CODENAME`) MUST match the `FROM debian:<release>`
 line in `containers/toolchain-debian-13/Dockerfile` — packages from these
 feeds are ABI- and signing-key-coupled to the toolchain libc.
+
+## Release branches
+
+Each Debian release lives on its own branch, named for the release
+version. Pin one in `PROJECT.star`:
+
+```python
+module("https://github.com/yoebuild/module-debian.git", ref = "13"),
+```
+
+| Branch | Debian release | Codename   |
+| ------ | -------------- | ---------- |
+| `13`   | Debian 13      | `trixie`   |
+| `12`   | Debian 12      | `bookworm` |
+
+Version-named branches keep this pin in the same shape as
+`module-alpine` (`ref = "3.21"`) and `module-ubuntu` (`ref = "26.04"`),
+so a project's module list reads as a set of release pins rather than a
+mix of versions and branch names. The codename stays wherever Debian's
+archive expects it: the `codename` kwarg on each feed, the
+`dists/<codename>/` paths the feeds fetch from, and the
+`FROM debian:<codename>-slim` line in the toolchain Dockerfile.
+
+A branch tracks a release, not a point release — `13` follows Debian
+13.1, 13.2, and so on.
 
 ## Layout
 

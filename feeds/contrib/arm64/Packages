@@ -3868,7 +3868,7 @@ MD5sum: 16eb25146fe69157abeb4bb46b96a55c
 SHA256: a7acf33c35781eceb5a00d5f82a3d41c5881365f3dc904e169ea62c1bb5e69b3
 
 Package: sabnzbdplus
-Version: 4.5.0+dfsg-1
+Version: 4.5.0+dfsg-1+deb13u1
 Installed-Size: 3788
 Maintainer: Jeroen Ploemen <jcfp@debian.org>
 Architecture: all
@@ -3881,10 +3881,10 @@ Description-md5: 9af99c00c3efdc0801f9fda555ddbd78
 Tag: implemented-in::python, role::program
 Section: contrib/net
 Priority: optional
-Filename: pool/contrib/s/sabnzbdplus/sabnzbdplus_4.5.0+dfsg-1_all.deb
-Size: 691864
-MD5sum: 112996fdfa2ca5a0733faafe0b23e398
-SHA256: 2ffc6045981ce7a55df96f5163adcfc69f3a858894a168ffea8f213b6febe087
+Filename: pool/contrib/s/sabnzbdplus/sabnzbdplus_4.5.0+dfsg-1+deb13u1_all.deb
+Size: 692096
+MD5sum: abb23069204fe60ef7a0959ba5e07680
+SHA256: 7bf0df6f51e1aa7e5b256a587468f7690b7bc7a343bd687647eebf56e5a5f473
 
 Package: serious-sam-tfe
 Source: serious-engine
@@ -4285,8 +4285,8 @@ SHA256: 761d15ede1f772deb74de1a1c5f02ada1293c60ad1d8897a1c719fd6df8e774b
 
 Package: u-boot-amlogic-binaries
 Source: u-boot
-Version: 2025.01-3
-Installed-Size: 10337
+Version: 2025.01-3+deb13u1
+Installed-Size: 10341
 Maintainer: Vagrant Cascadian <vagrant@debian.org>
 Architecture: arm64
 Replaces: u-boot-amlogic (<= 2024.01+dfsg-3)
@@ -4298,15 +4298,15 @@ Homepage: https://www.denx.de/wiki/U-Boot/
 Description-md5: 50c61aa3a5add381f0d520d9abd5628f
 Section: contrib/admin
 Priority: optional
-Filename: pool/contrib/u/u-boot/u-boot-amlogic-binaries_2025.01-3_arm64.deb
-Size: 815008
-MD5sum: 0189183929ef0d0fa549754694dac098
-SHA256: 454527e11443b19209b2f3da2dcb9bbb6ffa25eb1fe018cccd1177591b1d7d10
+Filename: pool/contrib/u/u-boot/u-boot-amlogic-binaries_2025.01-3+deb13u1_arm64.deb
+Size: 816100
+MD5sum: 8dc712eff75450205433f0d8e4dcd43c
+SHA256: 17e544402642925cf2e84d11908abd971d32ad0f9fae9d53ddb97f6124adc48b
 
 Package: u-boot-sitara-binaries
 Source: u-boot
-Version: 2025.01-3
-Installed-Size: 2438
+Version: 2025.01-3+deb13u1
+Installed-Size: 2439
 Maintainer: Vagrant Cascadian <vagrant@debian.org>
 Architecture: arm64
 Description: Boot loader binaries for TI Sitara systems
@@ -4315,10 +4315,10 @@ Homepage: https://www.denx.de/wiki/U-Boot/
 Description-md5: 3fd9c676b46bb19ac931bb79aa999748
 Section: contrib/admin
 Priority: optional
-Filename: pool/contrib/u/u-boot/u-boot-sitara-binaries_2025.01-3_arm64.deb
-Size: 615648
-MD5sum: 1d72c4c2525850f19dc5214aee2b00bd
-SHA256: 2bce7f70cf4a56a3ee7a4933f8e98be25dc13a75381f203cb182b0952ff505bd
+Filename: pool/contrib/u/u-boot/u-boot-sitara-binaries_2025.01-3+deb13u1_arm64.deb
+Size: 615836
+MD5sum: 17b6f8035e4d4ff347ec792177477c6d
+SHA256: e4d9c4b00564f707d267bbfbc97636ad3a23bea8e3132e7ed7e48c71c9028359
 
 Package: uhexen2
 Version: 1.5.9+git20230520.3380711+dfsg-1
@@ -4603,7 +4603,7 @@ SHA256: 775da7e3d2a0fa118ade18539aa445bf00a563bb2a3b5928a44ff5d862147a9d
 
 Package: libnvpair3linux
 Source: zfs-linux
-Version: 2.3.2-2
+Version: 2.3.9-0+deb13u1
 Installed-Size: 224
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: arm64
@@ -4617,14 +4617,14 @@ Description-md5: dff01db1623b4ac78db22bcc089d9e49
 Tag: role::shared-lib
 Section: contrib/libs
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/libnvpair3linux_2.3.2-2_arm64.deb
-Size: 61156
-MD5sum: b2d97a978174d8b86d8d34f78c4014b4
-SHA256: c7565b0502e84d2855f09eb0b9ad78a94630b6df4da92a8a0d3617f9dbc4db5b
+Filename: pool/contrib/z/zfs-linux/libnvpair3linux_2.3.9-0+deb13u1_arm64.deb
+Size: 61540
+MD5sum: 8ea45b757d1e27d9bd892bcab6609ada
+SHA256: de0e070e9154a10a9c3fdbb944d26011f9d698210169336442512836b9502c6a
 
 Package: libpam-zfs
 Source: zfs-linux
-Version: 2.3.2-2
+Version: 2.3.9-0+deb13u1
 Installed-Size: 143
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: arm64
@@ -4634,14 +4634,14 @@ Homepage: https://zfsonlinux.org/
 Description-md5: 22667c0f995168539097f168459e100b
 Section: contrib/admin
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/libpam-zfs_2.3.2-2_arm64.deb
-Size: 34992
-MD5sum: 1612c18780fed194ad8a20cab56c266f
-SHA256: 3fd63ce47eed5290a79a99442f81327d572b23e2a485e2ecea6393696fcf172d
+Filename: pool/contrib/z/zfs-linux/libpam-zfs_2.3.9-0+deb13u1_arm64.deb
+Size: 35236
+MD5sum: aa3ccd8562dba95f47374e8ddf2862a3
+SHA256: b93205852e3c99c846163dc3f399f42086d40f83787a1cb6556ae4b7cb12242c
 
 Package: libuutil3linux
 Source: zfs-linux
-Version: 2.3.2-2
+Version: 2.3.9-0+deb13u1
 Installed-Size: 160
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: arm64
@@ -4655,15 +4655,15 @@ Description-md5: 9bf9c128615174d04a0bb25b39d60322
 Tag: role::shared-lib
 Section: contrib/libs
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/libuutil3linux_2.3.2-2_arm64.deb
-Size: 53632
-MD5sum: 7b5fd80b8c80c9895210cb99f0e61caa
-SHA256: ec70d9d2703ae806cd89ff862dc60fdcce3bc16d5cd78b41feec76a750afe953
+Filename: pool/contrib/z/zfs-linux/libuutil3linux_2.3.9-0+deb13u1_arm64.deb
+Size: 53956
+MD5sum: 3ee4331660c8fac6449b493b2143c92c
+SHA256: bae299d1deef4290cd4eab81c17bbb6abe87dd2bbf662fd0a9f094ffe41e221b
 
 Package: libzfs6linux
 Source: zfs-linux
-Version: 2.3.2-2
-Installed-Size: 696
+Version: 2.3.9-0+deb13u1
+Installed-Size: 697
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: arm64
 Replaces: libzfs2, libzfs4, libzfs4linux
@@ -4676,14 +4676,14 @@ Homepage: https://zfsonlinux.org/
 Description-md5: 68404c691e40434a1c18cb823bdc6f84
 Section: contrib/libs
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/libzfs6linux_2.3.2-2_arm64.deb
-Size: 220624
-MD5sum: fb2e52a5a7940ee345633e17108d1032
-SHA256: deef8f74afaa778f5ca41537222907fcfdec50c1bb8f0e4df26d1a6575e49e98
+Filename: pool/contrib/z/zfs-linux/libzfs6linux_2.3.9-0+deb13u1_arm64.deb
+Size: 222332
+MD5sum: ad6d4d246f60ccdd6e102c83e7ebb017
+SHA256: e3413179111b26ff2d55614575e9a1ddc2c7e21584ecf5f4fb5206519b3e958b
 
 Package: libzfsbootenv1linux
 Source: zfs-linux
-Version: 2.3.2-2
+Version: 2.3.9-0+deb13u1
 Installed-Size: 153
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: arm64
@@ -4697,19 +4697,19 @@ Description-md5: ba1246d18e334f582c2be912dfe69655
 Tag: role::shared-lib
 Section: contrib/libs
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/libzfsbootenv1linux_2.3.2-2_arm64.deb
-Size: 38584
-MD5sum: d9cc7f6a3461938c40868690c018272b
-SHA256: e62b92c82bf8105020c5801695aaab046918f8617edfbb3dc32717622352136d
+Filename: pool/contrib/z/zfs-linux/libzfsbootenv1linux_2.3.9-0+deb13u1_arm64.deb
+Size: 38720
+MD5sum: dc9d59a29809d75838c8e527ebb5f6df
+SHA256: ae7f86373e6d974898746fd6372c80dc537df51cd5920c97ef6290b15f2733e4
 
 Package: libzfslinux-dev
 Source: zfs-linux
-Version: 2.3.2-2
-Installed-Size: 12120
+Version: 2.3.9-0+deb13u1
+Installed-Size: 12194
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: arm64
 Provides: libnvpair-dev, libuutil-dev
-Depends: libblkid-dev, libssl-dev | libssl1.0-dev, libtirpc-dev, zlib1g-dev, libnvpair3linux (= 2.3.2-2), libuutil3linux (= 2.3.2-2), libzfs6linux (= 2.3.2-2), libzfsbootenv1linux (= 2.3.2-2), libzpool6linux (= 2.3.2-2)
+Depends: libblkid-dev, libssl-dev | libssl1.0-dev, libtirpc-dev, zlib1g-dev, libnvpair3linux (= 2.3.9-0+deb13u1), libuutil3linux (= 2.3.9-0+deb13u1), libzfs6linux (= 2.3.9-0+deb13u1), libzfsbootenv1linux (= 2.3.9-0+deb13u1), libzpool6linux (= 2.3.9-0+deb13u1)
 Description: OpenZFS filesystem development files for Linux
 Multi-Arch: same
 Homepage: https://zfsonlinux.org/
@@ -4717,15 +4717,15 @@ Description-md5: 6abd96bb291d30f99361ec4367f10244
 Tag: devel::library, role::devel-lib
 Section: contrib/libdevel
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/libzfslinux-dev_2.3.2-2_arm64.deb
-Size: 1934100
-MD5sum: b1a0eb9b853b1017aaa6b484b8bc133d
-SHA256: ebc943f95456cd0d9ccb5ecc1e7c1a7abce6c5cb286d53b71ad61f8331537568
+Filename: pool/contrib/z/zfs-linux/libzfslinux-dev_2.3.9-0+deb13u1_arm64.deb
+Size: 1949520
+MD5sum: b0170b8c49b2f916a0563529fff6a489
+SHA256: 58b8e0c5dbbf61d430a201672e18827463c12db77ce97f8fe4cea18ccf942a43
 
 Package: libzpool6linux
 Source: zfs-linux
-Version: 2.3.2-2
-Installed-Size: 3924
+Version: 2.3.9-0+deb13u1
+Installed-Size: 3925
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: arm64
 Replaces: libzpool2, libzpool5, libzpool5linux
@@ -4737,31 +4737,31 @@ Homepage: https://zfsonlinux.org/
 Description-md5: 5411b703c1dae8e2c3f38bbe7330f01d
 Section: contrib/libs
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/libzpool6linux_2.3.2-2_arm64.deb
-Size: 1199448
-MD5sum: a078b768410c69a915a91e8f094de219
-SHA256: 4f4323a919b22eb4e2e01eef6e631719909da14eb4873718b0505fc1d5172599
+Filename: pool/contrib/z/zfs-linux/libzpool6linux_2.3.9-0+deb13u1_arm64.deb
+Size: 1210712
+MD5sum: a3006f7921fd4578ee629f959a26c4c2
+SHA256: 12252c722142f45d265deb76d371d48e0b779ff6f9e030107718f354478f8870
 
 Package: python3-pyzfs
 Source: zfs-linux
-Version: 2.3.2-2
+Version: 2.3.9-0+deb13u1
 Installed-Size: 435
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: arm64
-Depends: python3-cffi, zfsutils-linux (= 2.3.2-2), python3-cffi-backend-api-min (<= 9729), python3-cffi-backend-api-max (>= 9729), python3:any
+Depends: python3-cffi, zfsutils-linux (= 2.3.9-0+deb13u1), python3-cffi-backend-api-min (<= 9729), python3-cffi-backend-api-max (>= 9729), python3:any
 Description: wrapper for libzfs_core C library
 Homepage: https://zfsonlinux.org/
 Description-md5: cc3c162e8790777a7a60f39c29c8ee89
 Section: contrib/python
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/python3-pyzfs_2.3.2-2_arm64.deb
-Size: 70708
-MD5sum: acc37fd8f5a312c09deba1cb83dd3dd1
-SHA256: 0a80d23be0a8cb863a92eca3092b0fab5042fd815f897ff6e7ea83efdd92b7f7
+Filename: pool/contrib/z/zfs-linux/python3-pyzfs_2.3.9-0+deb13u1_arm64.deb
+Size: 70860
+MD5sum: cbd054b4877347b6817d27998cae552a
+SHA256: 5fdd7e611640fd8520d901d792756498785d78c828a8ed2aedbff8f6f851e1eb
 
 Package: pyzfs-doc
 Source: zfs-linux
-Version: 2.3.2-2
+Version: 2.3.9-0+deb13u1
 Installed-Size: 553
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: all
@@ -4773,60 +4773,60 @@ Homepage: https://zfsonlinux.org/
 Description-md5: 18d5a3ceb2ed973459a34b4af3cc06cc
 Section: contrib/doc
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/pyzfs-doc_2.3.2-2_all.deb
-Size: 64276
-MD5sum: 275142d26189e38c169b64ef57e6e199
-SHA256: a194f779f301327769fc1090296d0493759be646086b9642b94e020a30e59f33
+Filename: pool/contrib/z/zfs-linux/pyzfs-doc_2.3.9-0+deb13u1_all.deb
+Size: 64424
+MD5sum: 06482ca5a7d7a97ad9d2fa631cb595c5
+SHA256: 2f80c73fa519c5ab241aad83a649ad7232ea5e1137a78c32da41da8a4e9fabce
 
 Package: zfs-dkms
 Source: zfs-linux
-Version: 2.3.2-2
-Installed-Size: 18297
+Version: 2.3.9-0+deb13u1
+Installed-Size: 18660
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: all
 Replaces: spl-dkms
 Provides: zfs-modules
 Depends: dkms (>= 3.0.11), file, libc6-dev | libc-dev, lsb-release, libpython3-stdlib, debconf (>= 0.5) | debconf-2.0
-Recommends: zfs-zed, zfsutils-linux (>= 2.3.2-2), linux-libc-dev (<< 6.15~), linux-libc-dev (>= 4.18~)
+Recommends: zfs-zed, zfsutils-linux (>= 2.3.9-0+deb13u1), linux-libc-dev (<< 7.3~), linux-libc-dev (>= 4.18~)
 Suggests: debhelper
-Breaks: spl-dkms (<< 0.8.0~rc1), zfs-fuse (<< 2.3.2-2)
+Breaks: spl-dkms (<< 0.8.0~rc1), zfs-fuse (<< 2.3.9-0+deb13u1)
 Description: OpenZFS filesystem kernel modules for Linux
 Multi-Arch: foreign
 Homepage: https://zfsonlinux.org/
 Description-md5: 39e75ed3c1d3a5bc9c23ff32d0b5bbe1
 Section: contrib/kernel
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/zfs-dkms_2.3.2-2_all.deb
-Size: 2452312
-MD5sum: ffc04597b1cfbd7ad6569ee1c61eb41b
-SHA256: 71d79f602c24d5bfc6ed254bda108e04691fb38046d02d348a9f38398f73bc77
+Filename: pool/contrib/z/zfs-linux/zfs-dkms_2.3.9-0+deb13u1_all.deb
+Size: 2488712
+MD5sum: 6e2bd2c115b9de9f91e4719567eb82b2
+SHA256: 63f3add03706103c8ae6cf7d22821ecf8c46bfe8d0bae1a12e459e7bcbcee792
 
 Package: zfs-dracut
 Source: zfs-linux
-Version: 2.3.2-2
+Version: 2.3.9-0+deb13u1
 Installed-Size: 111
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: all
-Depends: dracut, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.2-2)
+Depends: dracut, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.9-0+deb13u1)
 Description: OpenZFS root filesystem capabilities for Linux - dracut
 Multi-Arch: foreign
 Homepage: https://zfsonlinux.org/
 Description-md5: 965d2232071aa7eaad3e0a3ca11764b0
 Section: contrib/kernel
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/zfs-dracut_2.3.2-2_all.deb
-Size: 37124
-MD5sum: d7911c937f3953ff80d937601495d9bd
-SHA256: 1b9ec0d83affd8d5b30ad034f5f5769f9cda9d00b6a255028f92a3d26d24e759
+Filename: pool/contrib/z/zfs-linux/zfs-dracut_2.3.9-0+deb13u1_all.deb
+Size: 37296
+MD5sum: fdb92db734e2bdd27b00fc4d3b586d47
+SHA256: 6c2fb8e325701360119e41433f2f9429af2664435100135d3c8518f8d01da4a2
 
 Package: zfs-initramfs
 Source: zfs-linux
-Version: 2.3.2-2
+Version: 2.3.9-0+deb13u1
 Installed-Size: 118
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: all
 Replaces: zfsutils-linux (<= 0.7.11-2)
-Depends: busybox-initramfs | busybox-static | busybox, initramfs-tools, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.2-2)
+Depends: busybox-initramfs | busybox-static | busybox, initramfs-tools, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.9-0+deb13u1)
 Breaks: zfsutils-linux (<= 0.7.11-2)
 Description: OpenZFS root filesystem capabilities for Linux - initramfs
 Multi-Arch: foreign
@@ -4834,19 +4834,19 @@ Homepage: https://zfsonlinux.org/
 Description-md5: ed136876804c562cd1f81b87863a33a9
 Section: contrib/kernel
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/zfs-initramfs_2.3.2-2_all.deb
-Size: 37408
-MD5sum: 1c6d02a5dbfd4c0346fff4e217214101
-SHA256: 3598a54f688019aeaae3555f3a2515aa43384f423b431a65cba39b467ed274db
+Filename: pool/contrib/z/zfs-linux/zfs-initramfs_2.3.9-0+deb13u1_all.deb
+Size: 37544
+MD5sum: 3d71b2500da371f0b96d5df677affef2
+SHA256: 9a3aaad7520d27bf7a726611bffd6c7a06006834b24bfe60821254bf642b5a4d
 
 Package: zfs-test
 Source: zfs-linux
-Version: 2.3.2-2
-Installed-Size: 39383
+Version: 2.3.9-0+deb13u1
+Installed-Size: 39758
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: arm64
 Replaces: zfsutils-linux (<= 0.7.9-2)
-Depends: acl, attr, bc, fio, ksh, lsscsi, mdadm, parted, python3, python3-pyzfs, sudo, sysstat, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.2-2), libaio1t64 (>= 0.3.93), libc6 (>= 2.38), libnvpair3linux (>= 0.8.2), libudev1 (>= 183), libzfs6linux (>= 2.2), libzpool6linux (>= 2.3), zlib1g (>= 1:1.2.3.3)
+Depends: acl, attr, bc, fio, ksh, lsscsi, mdadm, parted, python3, python3-pyzfs, sudo, sysstat, zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.9-0+deb13u1), libaio1t64 (>= 0.3.93), libc6 (>= 2.38), libnvpair3linux (>= 0.8.2), libudev1 (>= 183), libzfs6linux (>= 2.2), libzpool6linux (>= 2.3), zlib1g (>= 1:1.2.3.4)
 Recommends: curl, nfs-kernel-server, rsync, tzdata-legacy
 Conflicts: zutils
 Breaks: zfsutils-linux (<= 0.7.9-2)
@@ -4855,43 +4855,43 @@ Homepage: https://zfsonlinux.org/
 Description-md5: 626efba8698ac960b7fa793abb13e6d2
 Section: contrib/admin
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/zfs-test_2.3.2-2_arm64.deb
-Size: 28695964
-MD5sum: eca7bfeebc943cea48dcc1e2d70eb9e0
-SHA256: e46f4fcf33d846a038226f323f84b29472a5f67a83c3fe576e3137d29cf8e38d
+Filename: pool/contrib/z/zfs-linux/zfs-test_2.3.9-0+deb13u1_arm64.deb
+Size: 28724952
+MD5sum: 08d57f01448ccb3933811fe45064e44a
+SHA256: f6794712c212ce662f165d428aa5732da5b543c5d3c1fff222bc470186825800
 
 Package: zfs-zed
 Source: zfs-linux
-Version: 2.3.2-2
+Version: 2.3.9-0+deb13u1
 Installed-Size: 310
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: arm64
-Depends: zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.2-2), libc6 (>= 2.38), libnvpair3linux (>= 0.8.2), libudev1 (>= 183), libuuid1 (>= 2.16), libuutil3linux (>= 0.8.2), libzfs6linux (>= 2.2.3)
+Depends: zfs-modules | zfs-dkms, zfsutils-linux (>= 2.3.9-0+deb13u1), libc6 (>= 2.38), libnvpair3linux (>= 0.8.2), libudev1 (>= 183), libuuid1 (>= 2.16), libuutil3linux (>= 0.8.2), libzfs6linux (>= 2.2.3)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Description: OpenZFS Event Daemon
 Homepage: https://zfsonlinux.org/
 Description-md5: 371f25433afc0f13d827a77c432615a1
 Section: contrib/admin
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/zfs-zed_2.3.2-2_arm64.deb
-Size: 81420
-MD5sum: a04d9a783b60536d615970131bcb3fbb
-SHA256: 5631f29e38a81d557bc71c33731da173b442296db52b935ac5489ea89f2f0285
+Filename: pool/contrib/z/zfs-linux/zfs-zed_2.3.9-0+deb13u1_arm64.deb
+Size: 81776
+MD5sum: de77a0c2884eadd046ae538a5be12e2c
+SHA256: e7f1e634f73b2870bbcae4c4bce560dd4d2e3204879ab1797eb5e740ecdfff3d
 
 Package: zfsutils-linux
 Source: zfs-linux
-Version: 2.3.2-2
-Installed-Size: 2287
+Version: 2.3.9-0+deb13u1
+Installed-Size: 2296
 Maintainer: Debian ZFS on Linux maintainers <pkg-zfsonlinux-devel@alioth-lists.debian.net>
 Architecture: arm64
 Replaces: spl (<< 0.7.9-2), spl-dkms
 Provides: zfsutils
-Depends: libnvpair3linux (= 2.3.2-2), libuutil3linux (= 2.3.2-2), libzfs6linux (= 2.3.2-2), libzpool6linux (= 2.3.2-2), python3, libblkid1 (>= 2.16), libc6 (>= 2.38), libssl3t64 (>= 3.0.0), libudev1 (>= 183), libuuid1 (>= 2.16)
+Depends: libnvpair3linux (= 2.3.9-0+deb13u1), libuutil3linux (= 2.3.9-0+deb13u1), libzfs6linux (= 2.3.9-0+deb13u1), libzpool6linux (= 2.3.9-0+deb13u1), python3, libblkid1 (>= 2.16), libc6 (>= 2.38), libssl3t64 (>= 3.0.0), libudev1 (>= 183), libuuid1 (>= 2.16)
 Pre-Depends: init-system-helpers (>= 1.54~)
 Recommends: zfs-modules | zfs-dkms, zfs-zed
 Suggests: nfs-kernel-server, samba-common-bin (>= 3.0.23), zfs-initramfs | zfs-dracut
 Conflicts: nordugrid-arc-client, zfs, zfs-fuse
-Breaks: spl (<< 0.7.9-2), spl-dkms (<< 0.8.0~rc1), zfs-dkms (>> 2.3.2-2...), zfs-dkms (<< 2.3.2-2)
+Breaks: spl (<< 0.7.9-2), spl-dkms (<< 0.8.0~rc1), zfs-dkms (>> 2.3.9-0+deb13u1...), zfs-dkms (<< 2.3.9-0+deb13u1)
 Description: command-line tools to manage OpenZFS filesystems
 Homepage: https://zfsonlinux.org/
 Description-md5: e0d1624ff402201471b9a32e9cb71f16
@@ -4899,10 +4899,10 @@ Tag: admin::configuring, admin::filesystem, interface::commandline,
  role::program, scope::utility, use::configuring
 Section: contrib/admin
 Priority: optional
-Filename: pool/contrib/z/zfs-linux/zfsutils-linux_2.3.2-2_arm64.deb
-Size: 576148
-MD5sum: 85e25b8fcc04aac0cf7d3ad56e604b09
-SHA256: c106d34e72583bd81df49aef3a1382dd306053e01f52e7db05d41ab2005f7185
+Filename: pool/contrib/z/zfs-linux/zfsutils-linux_2.3.9-0+deb13u1_arm64.deb
+Size: 585296
+MD5sum: ce3af2135755ef1983cd3a5e5af1a502
+SHA256: ee44f4c0c54439fd79589973c5d1532fc9303f023ab90a31d70360ce73461fe8
 
 Package: zfsnap
 Version: 1.11.1-8.2
